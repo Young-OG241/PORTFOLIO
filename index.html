@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre Mouloubou — Dev & Data</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo">alex<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Expériences</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-talk">Let's Talk →</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Bonjour, je suis</p>
+      <h1 class="hero-name">Alexandre<br>Mouloubou</h1>
+      <div class="hero-typed-wrap">
+        <span class="typed-static">Je suis </span>
+        <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-bio">
+        Développeur Full Stack & Data Scientist junior, passionné par la conception de solutions digitales performantes
+        et l'exploitation intelligente des données.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Get in touch →</a>
+        <a href="#experience" class="btn-ghost">Voir mon parcours</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3<span class="green">+</span></span>
+          <span class="stat-label">Années d'expérience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2<span class="green">+</span></span>
+          <span class="stat-label">Entreprises</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15<span class="green">+</span></span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-frame">
+        <img src="alexandre.jpeg" alt="Alexandre Mouloubou" class="hero-photo" />
+        <div class="photo-bg-block"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section id="services">
+    <div class="section-header">
+      <span class="section-tag">Ce que je fais</span>
+      <h2>Mes <span class="highlight">Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-index="01">
+        <div class="service-icon">⚡</div>
+        <h3>Développement Full Stack</h3>
+        <p>Conception et développement d'applications web complètes, de l'API REST jusqu'à l'interface utilisateur
+          réactive.</p>
+        <div class="service-tags"><span>React</span><span>Node.js</span><span>Spring Boot</span></div>
+      </div>
+      <div class="service-card" data-index="02">
+        <div class="service-icon">🧠</div>
+        <h3>Data Science & ML</h3>
+        <p>Modélisation prédictive, pipelines ETL/ELT, analyse exploratoire et visualisation de données pour la prise de
+          décision.</p>
+        <div class="service-tags"><span>Python</span><span>XGBoost</span><span>PySpark</span></div>
+      </div>
+      <div class="service-card" data-index="03">
+        <div class="service-icon">🗄️</div>
+        <h3>Architecture & Backend</h3>
+        <p>Microservices, APIs robustes, gestion de bases de données et déploiement containerisé pour des systèmes
+          scalables.</p>
+        <div class="service-tags"><span>Docker</span><span>PostgreSQL</span><span>Kafka</span></div>
+      </div>
+      <div class="service-card" data-index="04">
+        <div class="service-icon">📊</div>
+        <h3>BI & Visualisation</h3>
+        <p>Tableaux de bord interactifs et rapports visuels pour le suivi de performance et l'analyse opérationnelle.
+        </p>
+        <div class="service-tags"><span>Power BI</span><span>Matplotlib</span><span>Seaborn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-tag">Stack technique</span>
+      <h2>Mes <span class="highlight">Compétences</span></h2>
+    </div>
+
+    <div class="skills-tabs">
+      <button class="tab-btn active" data-tab="data">🧠 Data Science</button>
+      <button class="tab-btn" data-tab="frontend">🎨 Frontend</button>
+      <button class="tab-btn" data-tab="backend">⚙️ Backend</button>
+    </div>
+
+    <!-- DATA SCIENCE -->
+    <div class="skills-panel active" id="tab-data">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-logo py">Py</div>
+          <div class="skill-info">
+            <h4>Python</h4>
+            <p>Pandas, NumPy, PySpark</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo ml">ML</div>
+          <div class="skill-info">
+            <h4>Machine Learning</h4>
+            <p>Random Forest, XGBoost, Régressions</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo etl">ETL</div>
+          <div class="skill-info">
+            <h4>Pipelines ETL/ELT</h4>
+            <p>Apache Airflow, orchestration</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="65"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo db">DB</div>
+          <div class="skill-info">
+            <h4>Bases de données</h4>
+            <p>Snowflake, BigQuery, MongoDB</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="70"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo kafka">KF</div>
+          <div class="skill-info">
+            <h4>Apache Kafka</h4>
+            <p>Flux de données en temps réel</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="55"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo bi">BI</div>
+          <div class="skill-info">
+            <h4>Data Visualisation</h4>
+            <p>Power BI, Matplotlib, Seaborn</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRONTEND -->
+    <div class="skills-panel" id="tab-frontend">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-logo react">⚛</div>
+          <div class="skill-info">
+            <h4>React.js / Next.js</h4>
+            <p>SPA, SSR, composants réactifs</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo html">HTML</div>
+          <div class="skill-info">
+            <h4>HTML5 / CSS3</h4>
+            <p>Sémantique, responsive, animations</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo tw">TW</div>
+          <div class="skill-info">
+            <h4>Tailwind CSS</h4>
+            <p>Design utility-first, composants UI</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo js">JS</div>
+          <div class="skill-info">
+            <h4>JavaScript (ES6+)</h4>
+            <p>DOM, fetch API, modules</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo figma">Fig</div>
+          <div class="skill-info">
+            <h4>Figma</h4>
+            <p>Maquettage, prototypage UI/UX</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="65"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo ts">TS</div>
+          <div class="skill-info">
+            <h4>TypeScript</h4>
+            <p>Typage statique, interfaces</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="skills-panel" id="tab-backend">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-logo java">Java</div>
+          <div class="skill-info">
+            <h4>Java / Spring Boot</h4>
+            <p>API REST, microservices, Maven</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="75"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo node">Node</div>
+          <div class="skill-info">
+            <h4>Node.js / Express</h4>
+            <p>APIs performantes, middleware</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo dotnet">.NET</div>
+          <div class="skill-info">
+            <h4>C# / .NET</h4>
+            <p>Applications et services backend</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="65"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo docker">🐳</div>
+          <div class="skill-info">
+            <h4>Docker / Kubernetes</h4>
+            <p>Containerisation, orchestration</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="65"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo sql">SQL</div>
+          <div class="skill-info">
+            <h4>MySQL / PostgreSQL</h4>
+            <p>Conception BDD, requêtes complexes</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-logo git">Git</div>
+          <div class="skill-info">
+            <h4>Git / TDD / BDD</h4>
+            <p>Versionning, tests unitaires, Postman</p>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-tag">Mon parcours</span>
+      <h2>Expériences & <span class="highlight">Formation</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Mar 2025 – Juil 2025</span>
+          <span class="timeline-badge project">Projet M2</span>
+          <h3>Prédiction des prix d'assurance</h3>
+          <p class="timeline-company">STUDINFO – École d'Ingénieur, Paris</p>
+          <p>Cas d'AXA France : pipeline ETL/ELT, modèles prédictifs (Random Forest, XGBoost), visualisations pour la
+            prise de décision.</p>
+          <div class="tl-tags"><span>Python</span><span>PySpark</span><span>Pandas</span><span>XGBoost</span></div>
+        </div>
+      </div>
+      <div class="timeline-item" data-side="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Fév 2024 – Juin 2024</span>
+          <span class="timeline-badge stage">Stage</span>
+          <h3>Développeur Backend</h3>
+          <p class="timeline-company">AXA France IARD – Nanterre</p>
+          <p>Migration monolithique → microservices. APIs Spring Boot, tests TDD/BDD, gestion de données clients.</p>
+          <div class="tl-tags"><span>Java 17</span><span>Spring Boot</span><span>Maven</span><span>TDD</span></div>
+        </div>
+      </div>
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Oct 2021 – Fév 2022</span>
+          <span class="timeline-badge work">CDI</span>
+          <h3>Développeur Frontend / Data Analyst</h3>
+          <p class="timeline-company">2PI Real Intelligence – Accra, Ghana</p>
+          <p>Développement système desktop, tableaux de bord ERP, analyse de données pour la performance opérationnelle.
+          </p>
+          <div class="tl-tags"><span>React</span><span>Power BI</span><span>Analyse ERP</span></div>
+        </div>
+      </div>
+      <div class="timeline-item" data-side="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2025</span>
+          <span class="timeline-badge edu">Formation</span>
+          <h3>Master 2 – Applications Intelligentes & Big Data</h3>
+          <p class="timeline-company">STUDINFO, Paris</p>
+          <p>Techniques avancées d'analyse de données, Big Data, IA appliquée.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2022</span>
+          <span class="timeline-badge edu">Formation</span>
+          <h3>Licence en Informatique</h3>
+          <p class="timeline-company">Institut de Technologie d'Accra, Ghana</p>
+          <p>Bases de la programmation, algorithmique et gestion des données.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">Travaillons ensemble</span>
+      <h2>Me <span class="highlight">Contacter</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="contact-intro">Disponible pour des missions freelance, des stages ou des postes en CDI. N'hésitez pas
+          à me contacter !</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong>Adresse</strong>
+              <p>40 Rue de la Brèche des Vignes<br>91800 Boussy-Saint-Antoine</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Téléphone</strong>
+              <p>+33 7 53 64 46 38</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>edouardmbabat@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/alexandreedouardmbabat-mouloubou-803891226" target="_blank">Voir mon
+                profil →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Prénom</label>
+            <input type="text" id="fname" placeholder="Jean" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Nom</label>
+            <input type="text" id="lname" placeholder="Dupont" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="jean.dupont@mail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" placeholder="Opportunité de travail..." required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Décrivez votre projet ou opportunité..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width">Envoyer le message →</button>
+        <div id="form-success" class="form-success hidden">✅ Message envoyé ! Je vous réponds très bientôt.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">alex<span class="dot">.</span></div>
+      <p>© 2025 Alexandre-Edouard Mbabat Mouloubou. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
